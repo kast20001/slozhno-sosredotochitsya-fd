@@ -2,4 +2,66 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--color);
+  font-size: var(--font-size-text);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  min-height: 668px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.header-title {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: center;
+  color: var(--h1-color);
+  font-size: var(--h1-size);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 4px 4px 0 var(--accent-color);;
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+@media (max-width: 768px) {
+  /* Мобильные */
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+/* Планшеты и десктоп */
+@media (min-width: 769px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.preface {
+  grid-row: 3/-2;
+  grid-column: 1/4;
+  align-self: center;
+  background-color: var(--accent-color);
+  color: var(--h3-color);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1em;
 }
