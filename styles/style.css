@@ -17,26 +17,82 @@
   min-height: 668px;
   position: relative;
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
   block-size: 100vh;
   min-block-size: 668px;
 }
 
+.header__theme-menu {
+  justify-self: start;
+  align-self: start; /* прижимаем к верху */
+  grid-column: 3/4;
+  grid-row: 1;
+}
+
 .header__theme-menu-list {
-  display: flex;
-  flex-direction: row;
+  margin-left: 35px; /*думать*/
+  margin-top: 40px;
   list-style: none;
+  width: 70px; /*указано строго, т.к. меняется только для комп. макета*/
+  height: 98px; 
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5em;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  border: none;
+  background-color: transparent;
+  font-size: var(--font-size-text);
+  color: var(--accent-color);
+}
+
+.decorative-element {
+  padding-left: 40px; /* место для точки */
+  margin-left: 35px; /*думать*/
+  grid-column: 3;
+  grid-row: 1; /* первая строка */
+  justify-self: end;
+  width: 55px;
+  height: 26px;
+  position: relative;
+  color: var(--accent-color, #FF0070);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.decorative-element::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color, #FF0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
 }
 
 .header-title {
+  margin: 0;
+  padding-bottom: 25px;
+  max-height: 192px;
   grid-column: 1 / -1;
   grid-row: 2;
-  align-self: center;
+  justify-self: center;
+  align-self: center; /* выравнивание по центру */
+  text-align: left;
   color: var(--h1-color);
   font-size: var(--h1-size);
   font-weight: var(--font-weight-bold);
-  text-shadow: 4px 4px 0 var(--accent-color);;
+  text-shadow: 4px 4px 0 var(--accent-color);
   line-height: var(--h1-line-height);
   letter-spacing: var(--letter-spacing-none);
 }
@@ -56,12 +112,56 @@
 }
 
 .preface {
+  margin-bottom: 4em;
   grid-row: 3/-2;
   grid-column: 1/4;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
   align-self: center;
   background-color: var(--accent-color);
   color: var(--h3-color);
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-bold);
-  margin-bottom: 1em;
+}
+
+.preface p {
+  padding: 0px;  /*на войне все средства хороши...*/
+  margin: 0px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.main-item {
+  background-color: var(--bg-color);
+  grid-column: 1/2;
+}
+
+.card-title {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-text);
+}
+
+.card-introductory {
+  background-color: var(--h3-bg-color);
+  color: var(--h3-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-text);
+}
+
+.card-points {
+  font-weight: var(--font-weight-normal);
+  line-height: var(--h4-line-height);
+}
+
+.title-footer {
+  min-height: 668px;
+  color: var(--h1-color);
+  font-size: var(--h1-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--letter-spacing-none);
 }

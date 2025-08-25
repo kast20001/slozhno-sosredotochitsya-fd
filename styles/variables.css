@@ -14,8 +14,9 @@
   --h1-size: 116px;
   --h1-color: #DB00FF;
   --accent-color: #FF0070;
-  --h1-line-height: 83%;
   --h3-bg-color: #FF0070;
   --h3-color: #000028;
-  --line-height-h3: 23.4px;
+  --h1-line-height: 83%;
+  --h3-line-height: 23.4px;
+  --h4-line-height: 23.4px;
 }
