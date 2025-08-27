@@ -13,6 +13,12 @@
   background-attachment: fixed;
 }
 
+.link {
+  text-decoration: none;
+  color: var(--color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
 .header {
   min-height: 668px;
   position: relative;
@@ -133,32 +139,49 @@
 .main {
   display: grid;
   grid-template-columns: auto 1fr;
+  margin: 0 auto;
 }
 
 .main-item {
+  margin-top: 1em;
   background-color: var(--bg-color);
   grid-column: 1/2;
 }
 
 .card-title {
+  margin-top: 12px;
+  margin-bottom: 0.9em;
+  padding-right: 10px;
+  text-align: left;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-text);
 }
 
 .card-introductory {
+  margin-bottom: 0.75em;
   background-color: var(--h3-bg-color);
   color: var(--h3-color);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-text);
 }
 
-.card-points {
+.card-point {
+  margin-bottom: 0.35em;
   font-weight: var(--font-weight-normal);
   line-height: var(--h4-line-height);
+  background-color: var(--accent-color);
+  letter-spacing: 0;
+}
+
+.card-text {
+  margin-top: 0;
+  padding-right: 10px;
+  margin-bottom: 1em;
+  line-height: var(--text-line-height);
 }
 
 .title-footer {
-  min-height: 668px;
+  height: 100vh;
   color: var(--h1-color);
   font-size: var(--h1-size);
   font-weight: var(--font-weight-bold);

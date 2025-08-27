@@ -5,6 +5,7 @@
 :root {
   --font-family: "IBM Plex Mono", monospace;
   --font-size-text: 18px;
+  --text-line-height: 23.4px;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
   --bg-color: #000028;
