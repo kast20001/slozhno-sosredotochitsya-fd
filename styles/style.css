@@ -1,5 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: var(--font-family);
@@ -114,6 +116,7 @@
 @media (min-width: 769px) {
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    text-align: left;
   }
 }
 
@@ -134,6 +137,30 @@
 .preface p {
   padding: 0px;  /*на войне все средства хороши...*/
   margin: 0px;
+}
+
+@media (width >= 768px) {
+  .header {
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr minmax(182px, 3fr) minmax(182px, 3fr);
+    grid-template-rows: 2fr 1fr 2fr;
+  }
+
+  .header-title {
+    grid-column: 1/5;
+    grid-row: 2;
+  }
+  
+  .preface {
+    min-width: 364px;
+    grid-column: 4/5;
+    grid-row: 3;
+  }
+
+  .header__theme-menu {
+    grid-row: 1;
+    grid-column: 5;
+  }
 }
 
 .main {
@@ -189,18 +216,28 @@
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
 }
 
+/* Подвал сайта и все, что с ним связано */
+
 .footer {
-  max-height: 100vh;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-footer {
-  margin-block-start: 90%;
-  justify-self: center;
-  align-self: center; /* выравнивание по центру */
-  text-align: left;
+  padding-top: 0.65em;
+  text-align: center;
   color: var(--h1-color);
   font-size: var(--h1-size);
   font-weight: var(--font-weight-bold);
   line-height: var(--h1-line-height);
   letter-spacing: var(--letter-spacing-none);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    max-height: 668px;
+  }
 }
