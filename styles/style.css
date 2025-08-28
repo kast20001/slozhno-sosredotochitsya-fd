@@ -180,8 +180,24 @@
   line-height: var(--text-line-height);
 }
 
+.gallary {
+  margin-top: 2.75em;
+}
+
+.gallery__image {
+  width: 100%; /* Занимает всю ширину ячейки */
+  object-fit: cover; /* Обрезает изображение для заполнения контейнера */
+}
+
+.footer {
+  max-height: 100vh;
+}
+
 .title-footer {
-  height: 100vh;
+  margin-block-start: 90%;
+  justify-self: center;
+  align-self: center; /* выравнивание по центру */
+  text-align: left;
   color: var(--h1-color);
   font-size: var(--h1-size);
   font-weight: var(--font-weight-bold);
