@@ -30,6 +30,7 @@
   grid-template-rows: auto 1fr auto;
   block-size: 100vh;
   min-block-size: 668px;
+  overflow-x: auto;
 }
 
 .header__theme-menu {
@@ -205,15 +206,17 @@
 }
 
 .main {
+  margin: 0 auto;
+  padding-top: 0.5em;
   padding-left: 10px;
   display: grid;
   grid-template-columns: auto 1fr;
-  margin: 0 auto;
+  background-color: var(--bg-color);
+  overflow-x: auto;
 }
 
 .main-item {
   margin-top: 1em;
-  background-color: var(--bg-color);
   grid-column: 1/2;
 }
 
@@ -227,6 +230,7 @@
 }
 
 .card-introductory {
+  margin-right: 10px;
   margin-bottom: 0.75em;
   background-color: var(--h3-bg-color);
   color: var(--h3-color);
@@ -235,7 +239,7 @@
 }
 
 .card-point {
-  margin-bottom: 0.35em;
+  margin: 1.25em 10px 0.45em 0;
   font-weight: var(--font-weight-normal);
   line-height: var(--h4-line-height);
   background-color: var(--accent-color);
@@ -251,9 +255,14 @@
 
 .gallary {
   margin-top: 2.75em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7%;
 }
 
 .gallery__image {
+  padding-right: 10px;
+  margin-bottom: 10px;
   width: 100%; /* Занимает всю ширину ячейки */
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
 }
@@ -277,7 +286,7 @@
 }
 
 .title-footer {
-  padding-top: 0.65em;
+  
   text-align: center;
   color: var(--h1-color);
   font-size: var(--h1-size);
