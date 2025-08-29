@@ -33,18 +33,26 @@
 }
 
 .header__theme-menu {
+  margin-top: 10px;
+  margin-inline-start: auto;
   justify-self: start;
   align-self: start; /* прижимаем к верху */
   grid-column: 3/4;
   grid-row: 1;
 }
 
+@media (min-width: 768px) {
+  .header__theme-menu {
+    margin-top: 20px;
+  }
+}
+
 .header__theme-menu-list {
   margin-left: 35px; /*думать*/
-  margin-top: 40px;
+  margin-top: 35px;
   list-style: none;
   width: 70px; /*указано строго, т.к. меняется только для комп. макета*/
-  height: 98px; 
+  height: 98px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 0.5em;
@@ -59,11 +67,10 @@
 }
 
 .decorative-element {
-  padding-left: 40px; /* место для точки */
-  margin-left: 35px; /*думать*/
+  margin-left: 1.5em;
+  padding-left: 0.25em;
   grid-column: 3;
   grid-row: 1; /* первая строка */
-  justify-self: end;
   width: 55px;
   height: 26px;
   position: relative;
@@ -88,9 +95,38 @@
   box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
 }
 
+.corner-decoration {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  z-index: 1;
+}
+
+.corner-decoration-end {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .corner-decoration {
+    top: 20px;
+    right: 20px;
+  }
+}
+
 .header-title {
-  margin: 0;
-  padding-bottom: 25px;
+  padding: 10px 10px 25px 10px;
+  margin: auto;
   max-height: 192px;
   grid-column: 1 / -1;
   grid-row: 2;
@@ -105,7 +141,7 @@
   letter-spacing: var(--letter-spacing-none);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Мобильные */
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -113,7 +149,7 @@
 }
 
 /* Планшеты и десктоп */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     text-align: left;
@@ -121,13 +157,17 @@
 }
 
 .preface {
-  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3.75em;
+  width: calc(100vw - 20px);
   grid-row: 3/-2;
   grid-column: 1/4;
   display: flex;
   flex-direction: column;
   gap: 0px;
   align-self: center;
+  align-items: center;
   background-color: var(--accent-color);
   color: var(--h3-color);
   font-size: var(--font-size-text);
@@ -139,6 +179,7 @@
   margin: 0px;
 }
 
+/* Заголовок сайта и подводка */
 @media (width >= 768px) {
   .header {
     display: grid;
@@ -164,6 +205,7 @@
 }
 
 .main {
+  padding-left: 10px;
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 0 auto;
@@ -216,9 +258,17 @@
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
 }
 
+/* Мейн сайта и все, что с ним связано */
+@media (width >= 768px) {
+  .main {
+    display: flex;
+  }
+}
+
 /* Подвал сайта и все, что с ним связано */
 
 .footer {
+  position: relative;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
