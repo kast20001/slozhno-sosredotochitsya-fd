@@ -13,6 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .link {
@@ -30,7 +31,6 @@
   grid-template-rows: auto 1fr auto;
   block-size: 100vh;
   min-block-size: 668px;
-  overflow-x: auto;
 }
 
 .header__theme-menu {
@@ -70,8 +70,6 @@
 .decorative-element {
   margin-left: 1.5em;
   padding-left: 0.25em;
-  grid-column: 3;
-  grid-row: 1; /* первая строка */
   width: 55px;
   height: 26px;
   position: relative;
@@ -135,7 +133,7 @@
   align-self: center; /* выравнивание по центру */
   text-align: left;
   color: var(--h1-color);
-  font-size: var(--h1-size);
+  font-size: var(--h1-size-mobile);
   font-weight: var(--font-weight-bold);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: var(--h1-line-height);
@@ -149,15 +147,8 @@
   }
 }
 
-/* Планшеты и десктоп */
-@media (min-width: 768px) {
-  .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    text-align: left;
-  }
-}
-
 .preface {
+  max-height: 117px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3.75em;
@@ -183,25 +174,57 @@
 /* Заголовок сайта и подводка */
 @media (width >= 768px) {
   .header {
-    display: grid;
-    grid-template-columns: 4fr 1fr 2fr minmax(182px, 3fr) minmax(182px, 3fr);
+    grid-template-columns: auto 20px auto auto;
     grid-template-rows: 2fr 1fr 2fr;
+    width: clamp(768px, 768px, 1023px);
+    box-sizing: border-box;  
   }
 
   .header-title {
-    grid-column: 1/5;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    line-height: 83%;
     grid-row: 2;
   }
   
   .preface {
-    min-width: 364px;
-    grid-column: 4/5;
+    margin-left: 10%;
+    margin-bottom: 4em;
+    max-width: 364px;
+    grid-column: 4;
     grid-row: 3;
   }
 
   .header__theme-menu {
     grid-row: 1;
-    grid-column: 5;
+    grid-column: 4;
+  }
+
+  .header__theme-menu-list {
+    margin-top: 160%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .decorative-element {
+    margin-top: 2em;
+    margin-right: 0;
+    margin-left: auto;
+    padding-left: 0.5em;
+  }
+
+  .corner-decoration {
+    right: 20px;
+    top: 20px;
+  }
+
+  .corner-decoration-end {
+    left: 20px;
+    bottom: 20px;
   }
 }
 
@@ -212,7 +235,6 @@
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: var(--bg-color);
-  overflow-x: auto;
 }
 
 .main-item {
@@ -269,9 +291,30 @@
 
 /* Мейн сайта и все, что с ним связано */
 @media (width >= 768px) {
-  .main {
-    display: flex;
+
+
+  .main-item {
+    display: grid;
+    grid-template-columns: minmax(236px, 315px) 20px minmax(472px, 648px);
   }
+
+  .card-title {
+    grid-column: 1/4;
+  }
+
+  .card-content {
+    grid-column: 1/-1;
+  }
+  
+  .card-title:nth-child(2n+1) {
+    grid-column: 1/2;
+    justify-self: start;
+  }
+
+  .card-content:nth-child(2n+1) {
+    grid-column: 3/4;
+  }
+
 }
 
 /* Подвал сайта и все, что с ним связано */
@@ -286,10 +329,9 @@
 }
 
 .title-footer {
-  
   text-align: center;
   color: var(--h1-color);
-  font-size: var(--h1-size);
+  font-size: var(--h1-size-mobile);
   font-weight: var(--font-weight-bold);
   line-height: var(--h1-line-height);
   letter-spacing: var(--letter-spacing-none);
