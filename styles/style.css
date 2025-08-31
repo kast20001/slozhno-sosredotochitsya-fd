@@ -4,6 +4,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  margin: auto;
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--color);
@@ -176,8 +177,7 @@
   .header {
     grid-template-columns: auto 20px auto auto;
     grid-template-rows: 2fr 1fr 2fr;
-    width: clamp(768px, 768px, 1023px);
-    box-sizing: border-box;  
+    box-sizing: border-box;
   }
 
   .header-title {
@@ -260,6 +260,15 @@
   font-size: var(--font-size-text);
 }
 
+.gallery-introductory {
+  margin-right: 10px;
+  margin-bottom: 0.75em;
+  background-color: var(--h3-bg-color);
+  color: var(--h3-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-text);
+}
+
 .card-point {
   margin: 1.25em 10px 0.45em 0;
   font-weight: var(--font-weight-normal);
@@ -275,7 +284,7 @@
   line-height: var(--text-line-height);
 }
 
-.gallary {
+.gallery {
   margin-top: 2.75em;
   display: flex;
   flex-direction: column;
@@ -292,34 +301,101 @@
 /* Мейн сайта и все, что с ним связано */
 @media (width >= 768px) {
 
-
   .main-item {
     display: grid;
-    grid-template-columns: minmax(236px, 315px) 20px minmax(472px, 648px);
+    grid-template-columns: minmax(236px, 315px) minmax(472px, 648px);
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .card-title {
-    grid-column: 1/4;
+    padding-top: 8%;
+    padding-right: 0;
+    width: clamp(236px, 235px, 315px);
+    grid-column: 1/2;
+  }
+
+  .main-item:nth-of-type(2n) .card-title {
+    padding-top: 10%;
   }
 
   .card-content {
-    grid-column: 1/-1;
+    padding-top: 6.75%;
+    padding-left: 3px;
+    grid-column: 2/3;
   }
-  
-  .card-title:nth-child(2n+1) {
+
+  .main-item:nth-of-type(2n) .card-content {
+    grid-column: 1/3;
+    padding-top: 1%;
+    padding-left: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .card-introductory {
+    margin-bottom: 0.5em;
+  }
+
+  .card-text {
+    margin-bottom: 1.2em;
+  }
+
+  .card-point {
+    margin-top: 1em;
+  }
+
+  .gallery {
+    margin-top: 3.45em;
+    grid-column: 1/3;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 10px;
+  }
+
+  .gallery__image {
+    padding: 0;
+    height: 100%;
+  }
+
+  .gallery__image:nth-child(1) {
+    grid-row: 1;
     grid-column: 1/2;
-    justify-self: start;
   }
 
-  .card-content:nth-child(2n+1) {
+  .gallery__image:nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 2;
+  }
+
+  .gallery__image:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .gallery__image:nth-child(4) {
+    grid-row: 1/3;
     grid-column: 3/4;
+}
+
+  .gallery__image:nth-child(5) {
+    grid-row: 3;
+    grid-column: 2 / 4;
   }
 
+  .gallery-introductory {
+    margin-bottom: 1.1em;
+  }
 }
 
 /* Подвал сайта и все, что с ним связано */
 
 .footer {
+  background-color: var(--bg-color);
   position: relative;
   height: 100vh;
   box-sizing: border-box;
