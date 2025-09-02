@@ -1,4 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   margin: auto;
@@ -18,6 +19,17 @@
   text-decoration: none;
   color: var(--color);
   text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--color);
+  padding-bottom: 1px;
+}
+
+.link:focus {
+  border: 1px solid var(--color);
+  border-radius: 0;
+  padding: 3px;
 }
 
 .header {
@@ -58,12 +70,22 @@
   gap: 0.5em;
 }
 
+.header__theme-menu-item {
+  min-width: 70px;
+}
+
 .header__theme-menu-button {
   text-transform: lowercase;
   border: none;
   background-color: transparent;
   font-size: var(--font-size-text);
   color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  border-radius: 0;
+  padding: 2px 8px;
 }
 
 .decorative-element {
@@ -450,6 +472,53 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .main-item {
+    padding-right: 0;
+    padding-left: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-title {
+    padding-top: 7%;
+    padding-left: 2.5%;
+    min-width: 315px;
+  }
+
+  .main-item:nth-of-type(2n) .card-title {
+    padding-top: 10%;
+    margin-bottom: 1em;
+  }
+
+  .card-content {
+    padding-top: 4.6%;
+    padding-left: 0.5%;
+    padding-right: 1.5%;
+    grid-column: 2/4;
+  }
+
+  .main-item:nth-of-type(2n) .card-content {
+    grid-column: 1/4;
+    padding-top: 0%;
+    padding-left: 10px;
+    padding-right: 1%;
+    margin-bottom: 0.5em;
+    display: flex;
+    gap: 20px;
+  }
+
+  .main-item:nth-of-type(2n) .text-content {
+    min-width: 315px;
+  }
+
+  .gallery {
+    grid-column: 1/4;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-bottom: 6%;
+  }
+}
+
 /* Подвал сайта и все, что с ним связано */
 
 .footer {
@@ -483,5 +552,11 @@
   }
   .title-footer {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    margin: 0px;
   }
 }
