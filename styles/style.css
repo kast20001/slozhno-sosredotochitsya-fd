@@ -248,18 +248,24 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
     margin: 0;
-    padding: 0;
+    padding-right: 0em;
+    padding-left: 3em;
+    padding-bottom: 2.3em;
   }
 
   .header__theme-menu-item {
-    margin: 0;
+    margin-top: 5px;
     padding: 0;
   }
 
   .preface {
-    max-width: none;
+    align-items: start;
+    padding: 0;
+    margin-left: 25%;
+    margin-top: 6%;
+    min-width: 491px;
     width: clamp(491px, 491px, 600px);
     grid-column: 2/4;
   }
