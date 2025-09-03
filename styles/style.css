@@ -329,7 +329,7 @@
 .card-title {
   margin-top: 10px;
   margin-bottom: 1.2em;
-  margin-left: 0.5em;
+  margin-left: 0.4em;
   padding-right: 1em;
   text-align: left;
   font-weight: var(--font-weight-bold);
@@ -366,16 +366,16 @@
 
 .gallery {
   margin-top: 2.7em;
-  margin-bottom: 7%;
+  margin-bottom: 8%;
   margin-left: 0.4em;
-  margin-right: 0.3em;
+  margin-right: 0.2em;
   display: flex;
   flex-direction: column;
 }
 
 .gallery-introductory {
   margin-right: 10px;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.65em;
   background-color: var(--h3-bg-color);
   color: var(--h3-color);
   font-weight: var(--font-weight-bold);
@@ -384,7 +384,7 @@
 
 .gallery__image {
   padding-right: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 1.6%;
   width: 100%; /* Занимает всю ширину ячейки */
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
 }
@@ -400,6 +400,7 @@
 
   .card-title {
     padding-top: 8.3%;
+    margin-left: 0.5em;
     padding-right: 0;
     width: clamp(236px, 235px, 315px);
     grid-column: 1/2;
@@ -562,8 +563,24 @@
 }
 
 @media (max-width: 767px) {
+  .header-title {
+    padding-top: 8px;
+    padding-left: 7px;
+  }
+  
   .footer {
     min-height: 668px;
+  }
+  
+  .title-footer {
+    padding-right: 2%;
+  }
+  .footer .corner-decoration {
+    top: 12px;
+  }
+  
+  .footer .corner-decoration-end {
+    left: 7px;
   }
 }
 
