@@ -15,6 +15,8 @@
   --h1-size-mobile: 116px;
   --h1-color: #DB00FF;
   --accent-color: #FF0070;
+  --button-color: #FF0070;
+  --accent-color-alpha: rgb(255, 0, 111, 0.4);
   --h3-bg-color: #FF0070;
   --h3-color: #000028;
   --h1-line-height: 83%;
