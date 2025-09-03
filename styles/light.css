@@ -35,6 +35,6 @@
 
 }
 
-.theme-light.decorative-element {
-  visibility: hidden;
+.decorative-element {
+  display: none;
 }

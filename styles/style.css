@@ -108,6 +108,7 @@
 }
 
 .decorative-element {
+  display: block;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -189,7 +190,7 @@
 
 .preface {
   max-height: 117px;
-  margin-left: auto;
+  margin-left: 2%;
   margin-right: auto;
   margin-bottom: 3.75em;
   width: calc(100vw - 20px);
@@ -323,7 +324,6 @@
 .main-item {
   margin-top: 1em;
   grid-column: 1/2;
-  
 }
 
 .card-title {
@@ -337,7 +337,7 @@
 }
 
 .card-content {
-  margin-left: 0.5em;
+  margin-left: 0.4em;
   margin-right: 0.5em;
 }
 
@@ -351,7 +351,7 @@
 }
 
 .card-point {
-  margin: 1em 5px 0.45em 0;
+  margin: 1em 5px 0.49em 0;
   font-weight: var(--font-weight-normal);
   line-height: var(--h4-line-height);
   background-color: var(--accent-color);
@@ -365,7 +365,7 @@
 }
 
 .gallery {
-  margin-top: 3em;
+  margin-top: 2.7em;
   margin-bottom: 7%;
   margin-left: 0.4em;
   margin-right: 0.3em;
@@ -412,12 +412,14 @@
   }
 
   .card-content {
+    margin-left: 2%;
     padding-top: 6.75%;
     padding-left: 0px;
     grid-column: 2/3;
   }
 
   .main-item:nth-of-type(2n) .card-content {
+    margin-left: 1%;
     grid-column: 1/3;
     padding-top: 0%;
     padding-left: 0;
@@ -435,8 +437,8 @@
   }
 
   .card-point {
-    margin-top: 1.2em;
-    margin-right: 0;
+    margin-top: 1.1em;
+    margin-right: 0.4%;
   }
 
   .gallery {
@@ -512,7 +514,7 @@
 
   .card-content {
     padding-top: 4.6%;
-    padding-left: 0.5%;
+    padding-left: 0%;
     padding-right: 1.5%;
     grid-column: 2/4;
   }

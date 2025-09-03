@@ -34,3 +34,8 @@
     --accent-color-alpha: rgb(255, 0, 111, 0.4);
   }
 }
+
+
+.decorative-element {
+  display: block;
+}
