@@ -114,7 +114,7 @@
   display: block;
   position: absolute;
   top: 10px;
-  right: 18px;
+  right: 15px;
   width: 55px;
   height: 26px;
   color: var(--accent-color, #ff0070);
@@ -141,7 +141,7 @@
 .corner-decoration {
   position: absolute;
   top: 10px;
-  right: 14px;
+  right: 10px;
   width: 24px;
   height: 24px;
   border-top: 1px solid var(--button-color);
@@ -190,7 +190,7 @@
 }
 
 .preface {
-  margin-left: 2%;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 3.75em;
   width: calc(100vw - 20px);
@@ -227,8 +227,6 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
-    line-height: 83%;
-    grid-row: 2;
   }
 
   .preface {
@@ -337,8 +335,8 @@
 }
 
 .card-content {
-  margin-left: 0.4em;
-  margin-right: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.3em;
 }
 
 .card-introductory {
@@ -367,8 +365,7 @@
 .gallery {
   margin-top: 2.7em;
   margin-bottom: 8%;
-  margin-left: 0.4em;
-  margin-right: 0.2em;
+  margin-left: 0.55em;
   display: flex;
   flex-direction: column;
 }
@@ -384,7 +381,7 @@
 
 .gallery__image {
   padding-right: 10px;
-  margin-bottom: 1.6%;
+  margin-bottom: 1.4%;
   width: 100%; /* Занимает всю ширину ячейки */
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
 }
@@ -413,6 +410,7 @@
 
   .card-content {
     margin-left: 2%;
+    margin-right: 0.4em;
     padding-top: 6.75%;
     padding-left: 0px;
     grid-column: 2/3;
@@ -525,11 +523,14 @@
     padding-right: 1%;
     margin-bottom: 0.5em;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* Разрешаем перенос и меняем промежуток*/
+    gap: 19px;
   }
 
   .main-item:nth-of-type(2n) .text-content {
     min-width: 315px;
+    max-width: calc(33.333% - 15px); /* Делим 100% на три и ставим гэп, указываем флекс-гроу*/
+    flex-grow: 1;
   }
 
   .gallery {
