@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  margin: auto;
+  margin: 0 auto;
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--color);
@@ -15,6 +15,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .link {
@@ -523,13 +524,13 @@
     padding-right: 1%;
     margin-bottom: 0.5em;
     display: flex;
-    flex-wrap: wrap; /* Разрешаем перенос и меняем промежуток*/
+    flex-wrap: wrap; /* Разрешаем перенос и меняем промежуток */
     gap: 19px;
   }
 
   .main-item:nth-of-type(2n) .text-content {
     min-width: 315px;
-    max-width: calc(33.333% - 15px); /* Делим 100% на три и ставим гэп, указываем флекс-гроу*/
+    max-width: calc(33.333% - 15px); /* Делим 100% на три и ставим гэп, указываем флекс-гроу */
     flex-grow: 1;
   }
 
