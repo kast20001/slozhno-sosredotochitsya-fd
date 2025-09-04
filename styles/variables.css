@@ -12,14 +12,14 @@
   --color: #F1B2CE;
   --letter-spacing-none: 0px;
   --bg-image: url(../images/cover-image-dark.png);
-  --h1-size-mobile: 116px;
-  --h1-color: #DB00FF;
+  --title-size-mobile: 116px;
+  --title-color: #DB00FF;
   --accent-color: #FF0070;
   --button-color: #FF0070;
   --accent-color-alpha: rgb(255, 0, 111, 0.4);
-  --h3-bg-color: #FF0070;
-  --h3-color: #000028;
-  --h1-line-height: 83%;
-  --h3-line-height: 23.4px;
-  --h4-line-height: 23.4px;
+  --intoductory-bg-color: #FF0070;
+  --hintoductory-color: #000028;
+  --title-line-height: 83%;
+  --intoductory-line-height: 23.4px;
+  --card-point-line-height: 23.4px;
 }

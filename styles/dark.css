@@ -12,10 +12,10 @@
   --bg-color: #000028;
   --color: #f1b2ce;
   --bg-image: url(../images/cover-image-dark.png);
-  --h1-color: #db00ff;
+  --title-color: #db00ff;
   --accent-color: #ff0070;
-  --h3-bg-color: #ff0070;
-  --h3-color: #000028;
+  --intoductory-bg-color: #ff0070;
+  --intoductory-color: #000028;
   --button-color: #ff0070;
   --accent-color-alpha: rgb(255, 0, 111, 0.4);
 }
@@ -25,10 +25,10 @@
     --bg-color: #000028;
     --color: #f1b2ce;
     --bg-image: url(../images/cover-image-dark.png);
-    --h1-color: #db00ff;
+    --title-color: #db00ff;
     --accent-color: #ff0070;
-    --h3-bg-color: #ff0070;
-    --h3-color: #000028;
+    --intoductory-bg-color: #ff0070;
+    --intoductory-color: #000028;
     --button-color: #ff0070;
     --accent-color-alpha: rgb(255, 0, 111, 0.4);
   }
