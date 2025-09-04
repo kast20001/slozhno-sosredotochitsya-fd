@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  margin: 0 auto;
+  margin: 0 auto; /* центрируем */
   font-family: var(--font-family);
   background-color: var(--bg-color);
   color: var(--color);
@@ -15,7 +15,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100%; /* макс ширина */
 }
 
 .link {
@@ -545,7 +545,6 @@
 /* Подвал сайта и все, что с ним связано */
 
 .footer {
-  background-color: var(--bg-color);
   position: relative;
   height: 100vh;
   box-sizing: border-box;
