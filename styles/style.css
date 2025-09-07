@@ -14,7 +14,7 @@
   background-attachment: fixed;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   max-width: 1440px; /* Ограничиваем максимальную ширину, чтобы центрирование работало */
 }
 
@@ -184,8 +184,9 @@
 }
 
 .preface {
+  justify-self: end; /* прижимаем к правому краю грида */
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 10px;
   margin-bottom: 3.75em;
   width: calc(100vw - 20px);
   grid-row: 3/-2;
@@ -226,6 +227,7 @@
   .preface {
     margin-left: 10%;
     margin-bottom: 4em;
+    margin-right: 20px;
     max-width: 364px;
     grid-column: 4;
     grid-row: 3;
@@ -544,6 +546,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 668px; /* Минимальная высота подвала для мобильных устройств */
 }
 
 .title-footer {
@@ -563,24 +566,19 @@
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
   
-  .footer {
-    min-height: 668px; /* Минимальная высота подвала для мобильных устройств */
-  }
-  
   .title-footer {
     padding-right: 2%;
   }
+  
   .footer .corner-decoration {
     top: 12px;
   }
   
-  .footer .corner-decoration-end {
-    left: 7px;
-  }
 }
 
 @media (width >= 768px) {
   .footer {
+    margin-top: 2px;
     min-height: 1024px; /* Минимальная высота подвала для планшетов */
   }
   .title-footer {
